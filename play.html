@@ -29,12 +29,18 @@
                 <input type="number" id="robots" name="robots" min="0" max="100" value="0">
                 <label for="pizzas">Pizzas:</label>
                 <input type="number" id="pizzas" name="pizzas" min="0" max="100" value="0">
+                <label for="labor">Labor (hours):</label>
+                <input type="number" id="labor" name="labor" min="0" max="200" value="0">
+                <label for="capital">Capital ($):</label>
+                <input type="number" id="capital" name="capital" min="0" max="1000" value="0">
                 <button onclick="allocateResources()">Allocate</button>
             </div>
             <div id="results">
                 <h3>Results</h3>
                 <p id="robot-result">Robots Produced: 0</p>
                 <p id="pizza-result">Pizzas Produced: 0</p>
+                <p id="efficiency">Efficiency: 0%</p>
+                <p id="message"></p>
             </div>
         </section>
     </main>
