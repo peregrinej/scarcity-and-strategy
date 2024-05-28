@@ -144,3 +144,40 @@ button:hover {
     color: var(--primary-color);
 }
 
+.forum {
+    text-align: center;
+}
+
+.forum h2 {
+    color: var(--primary-color);
+}
+
+.forum-section {
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.9); /* Add a slight background to forum sections for better readability */
+    padding: 1rem;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.forum-section h3 {
+    color: var(--secondary-color);
+}
+
+.forum-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.forum-section ul li {
+    margin: 0.5rem 0;
+}
+
+.forum-section ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.forum-section ul li a:hover {
+    text-decoration: underline;
+}
+
