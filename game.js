@@ -47,4 +47,24 @@ function allocateResources() {
         message = 'You need to optimize your resource allocation.';
     }
     document.getElementById('message').textContent = message;
+
+    // Trigger animations
+    triggerAnimations();
+}
+
+function triggerAnimations() {
+    const robotAnimation = document.getElementById('robot-animation');
+    const pizzaAnimation = document.getElementById('pizza-animation');
+
+    robotAnimation.classList.remove('hidden');
+    robotAnimation.classList.add('visible');
+    pizzaAnimation.classList.remove('hidden');
+    pizzaAnimation.classList.add('visible');
+
+    setTimeout(() => {
+        robotAnimation.classList.remove('visible');
+        robotAnimation.classList.add('hidden');
+        pizzaAnimation.classList.remove('visible');
+        pizzaAnimation.classList.add('hidden');
+    }, 3000);
 }
