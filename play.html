@@ -35,12 +35,26 @@
                 <input type="number" id="capital" name="capital" min="0" max="1000" value="0">
                 <button onclick="allocateResources()">Allocate</button>
             </div>
+            <div id="cards">
+                <h3>Resource Cards</h3>
+                <button onclick="drawResourceCard()">Draw Resource Card</button>
+                <p id="resource-card-result"></p>
+                <h3>Event Cards</h3>
+                <button onclick="drawEventCard()">Draw Event Card</button>
+                <p id="event-card-result"></p>
+            </div>
             <div id="results">
                 <h3>Results</h3>
                 <p id="robot-result">Robots Produced: 0</p>
                 <p id="pizza-result">Pizzas Produced: 0</p>
                 <p id="efficiency">Efficiency: 0%</p>
                 <p id="message"></p>
+            </div>
+            <div id="dashboard">
+                <h3>Player Dashboard</h3>
+                <p id="total-resources">Total Resources Allocated: 0/100</p>
+                <p id="total-labor">Total Labor Used: 0/200</p>
+                <p id="total-capital">Total Capital Used: 0/1000</p>    
             </div>
             <div class="animations">
                 <img src="robot.png" id="robot-animation" class="hidden" alt="Robot">
