@@ -114,3 +114,24 @@ button:hover {
 #results h3 {
     color: var(--primary-color);
 }
+
+.animations {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.animations img {
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.animations img.hidden {
+    transform: scale(0);
+}
+
+.animations img.visible {
+    transform: scale(1);
+}
