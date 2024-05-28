@@ -36,6 +36,9 @@ function allocateResources() {
     document.getElementById('robot-result').textContent = `Robots Produced: ${robotResult}`;
     document.getElementById('pizza-result').textContent = `Pizzas Produced: ${pizzaResult}`;
     document.getElementById('efficiency').textContent = `Efficiency: ${efficiency.toFixed(2)}%`;
+    document.getElementById('total-resources').textContent = `Total Resources Allocated: ${resourceUsage}/100`;
+    document.getElementById('total-labor').textContent = `Total Labor Used: ${laborUsage}/200`;
+    document.getElementById('total-capital').textContent = `Total Capital Used: ${capitalUsage}/1000`;
 
     // Set message
     let message = '';
@@ -47,24 +50,29 @@ function allocateResources() {
         message = 'You need to optimize your resource allocation.';
     }
     document.getElementById('message').textContent = message;
-
-    // Trigger animations
-    triggerAnimations();
 }
 
-function triggerAnimations() {
-    const robotAnimation = document.getElementById('robot-animation');
-    const pizzaAnimation = document.getElementById('pizza-animation');
-
-    robotAnimation.classList.remove('hidden');
-    robotAnimation.classList.add('visible');
-    pizzaAnimation.classList.remove('hidden');
-    pizzaAnimation.classList.add('visible');
-
-    setTimeout(() => {
-        robotAnimation.classList.remove('visible');
-        robotAnimation.classList.add('hidden');
-        pizzaAnimation.classList.remove('visible');
-        pizzaAnimation.classList.add('hidden');
-    }, 3000);
+function drawResourceCard() {
+    const resourceCards = [
+        "You found an additional 10 units of labor.",
+        "You acquired 5 more units of capital.",
+        "You discovered a new technology that increases efficiency by 10%.",
+        "You received a grant adding 20 units of capital.",
+        "You hired more workers, adding 15 units of labor."
+    ];
+    const randomCard = resourceCards[Math.floor(Math.random() * resourceCards.length)];
+    document.getElementById('resource-card-result').textContent = randomCard;
 }
+
+function drawEventCard() {
+    const eventCards = [
+        "A natural disaster has decreased your resources by 10 units.",
+        "A new government policy has increased your capital by 10 units.",
+        "A labor strike has decreased your available labor by 20 units.",
+        "A technological breakthrough increases efficiency by 15%.",
+        "A market crash decreases your capital by 25 units."
+    ];
+    const randomCard = eventCards[Math.floor(Math.random() * eventCards.length)];
+    document.getElementById('event-card-result').textContent = randomCard;
+}
+
